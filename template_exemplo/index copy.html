@@ -427,22 +427,19 @@
         }
 
         /* Home Header Section */
-        /* Main Home Header Section */
-.section_home-header {
-    width: 100vw;
-    height: 100vh;
-    position: relative;
-    display: flex;
-    align-items: center;
-    min-height: 100vh;
-    max-height: 60rem;
-    margin-left: calc(-50vw + 50%);
-    /* ISTO AQUI: */
-    background: linear-gradient(135deg, var(--cream) 0%, var(--light-green) 100%);
-}
+        .section_home-header {
+            width: 100vw;
+            height: 100vh;
+            position: relative;
+            display: flex;
+            align-items: center;
+            min-height: 100vh;
+            max-height: 60rem;
+            margin-left: calc(-50vw + 50%);
+            background: linear-gradient(135deg, var(--cream) 0%, var(--light-green) 100%);
+        }
 
-
-        /* .home-header_content {
+        .home-header_content {
             justify-content: center;
             align-items: center;
             min-height: 100vh;
@@ -450,7 +447,7 @@
             display: flex;
             position: relative;
             z-index: 2;
-        } */
+        }
 
         .home-header_grid-content {
             grid-column-gap: 3rem;
@@ -563,10 +560,10 @@
             color: var(--white);
         }
 
-        /* .home-header_content-left {
+        .home-header_content-left {
             z-index: 2;
             position: relative;
-        } */
+        }
 
         .hero-image {
             width: 85%;
@@ -754,7 +751,6 @@
                 width: auto;
                 padding: 0.75rem 0;
                 font-size: 1.3rem;
-                color: #fff;
             }
 
             .navbar_menu-button {
@@ -827,88 +823,6 @@
                 font-size: 2rem;
             }
         }
-        /* 1) Vídeo de fundo e overlay de degradê */
-.section_home-header {
-  position: relative;
-  overflow: hidden;
-  /* altura que quiser, por ex: */
-  min-height: 80vh;
-}
-
-#hero-video {
-  position: absolute;
-  top: 0; left: 0;
-  width: 100%; height: 100%;
-  object-fit: cover;
-  filter: brightness(0.8) contrast(1.1);
-  z-index: 0;
-}
-
-/* overlay degradê de transparente (topo) para branco (base) */
-.section_home-header::before {
-  content: "";
-  position: absolute;
-  top: 0; left: 0;
-  width: 100%; height: 100%;
-  background: linear-gradient(
-    to bottom,
-    rgba(255,255,255,0.0) 0%,
-    rgba(255,255,255,0.4) 50%,
-    rgba(255,255,255,1) 100%
-  );
-  z-index: 1;
-}
-
-/* 2) Seu conteúdo sobre o vídeo */
-.home-header_content {
-  position: relative;
-  z-index: 2;
-  max-width: 600px;
-  margin: 0 auto;
-  padding: 4rem 1rem;
-  text-align: left;
-}
-
-.home-header_content h1,
-.home-header_content h2,
-.home-header_content p {
-  color: #0a5935; /* seu verde principal */
-}
-
-.home-header_content h1 {
-  font-size: 3rem;
-  line-height: 1.1;
-}
-
-.home-header_content p {
-  font-size: 1.125rem;
-  margin-top: 1.5rem;
-  color: #333; /* texto de apoio */
-}
-
-#navbar {
-  position: fixed;
-  top: 0; left: 0;
-  width: 100%;
-  padding: 1rem 2rem;
-  background-color: rgba(254, 247, 240, 0.244);  /* leve transparência */
-  backdrop-filter: blur(4px);                   /* blur inicial suave */
-  -webkit-backdrop-filter: blur(4px);
-  border-bottom: 1px solid rgba(129, 199, 132, 0.2);
-  box-shadow: 0 2px 6px rgba(45, 125, 50, 0.05);
-  transition: background-color 0.3s ease,
-              backdrop-filter 0.3s ease,
-              border-bottom 0.3s ease,
-              box-shadow 0.3s ease;
-  z-index: 1000;
-}
-
-#w-nav-menu .w-nav-link,
-#w-nav-menu .lang-btn {
-  color: #fff;
-  transition: color 0.3s ease;
-}
-
     </style>
 </head>
 
@@ -976,34 +890,42 @@
     <div class="main-wrapper">
         <!-- Home Header Section -->
         <section class="section_home-header">
-  <!-- Vídeo de fundo -->
-  <video id="hero-video" autoplay muted loop playsinline>
-                        <source src="https://cdn.prod.website-files.com/61c85ce6b8161ffd30681aa9/64ff898291276c67317a8d7b_SeasonThree_Cut-transcode.mp4" data-wf-ignore="true">
-                        <source src="https://cdn.prod.website-files.com/61c85ce6b8161ffd30681aa9/64ff898291276c67317a8d7b_SeasonThree_Cut-transcode.webm" data-wf-ignore="true">
-                    </video>
-
-  <!-- Conteúdo sobre o vídeo -->
-  <div class="home-header_content">
-    <div class="home-header-tag">✨ Empoderamento Feminino</div>
-    <h1 class="home-header-h1">Recomeçar é um ato de coragem</h1>
-    <div class="home-header-subtitle">Juntas somos mais fortes</div>
-    <p class="text-size-medium">
-      Inspiramos, acolhemos e guiamos <strong>mulheres imigrantes</strong>  
-      e todas que precisam recomeçar em sua jornada de  
-      <strong>empoderamento, cura e profissionalização</strong>.
-    </p>
-    <div class="cta-buttons">
-      <a href="quem-somos.html" class="cta-primary">Conhecer Nossa Missão</a>
-      <a href="ela-superou.html" class="cta-secondary">Ver Histórias de Superação</a>
-    </div>
-  </div>
-
-  <!-- suas folhas decorativas -->
-  <!-- <div class="decorative-leaf leaf-1">🌿</div>
-  <div class="decorative-leaf leaf-2">🌸</div> -->
-  <!-- etc -->
-</section>
-
+            <!-- Decorative Elements -->
+            <div class="decorative-leaf leaf-1">🌿</div>
+            <div class="decorative-leaf leaf-2">🌸</div>
+            <div class="decorative-leaf leaf-3">🍃</div>
+            <div class="decorative-leaf leaf-4">🌺</div>
+            
+            <div class="padding-global">
+                <div class="container-large">
+                    <div class="home-header_content">
+                        <div class="home-header_grid-content">
+                            <div class="home-header_content-left">
+                                <div class="margin-bottom margin-medium">
+                                    <div class="home-header-tag">✨ Empoderamento Feminino</div>
+                                </div>
+                                <div class="margin-bottom margin-large">
+                                    <h1 class="home-header-h1">Recomeçar é um ato de coragem</h1>
+                                    <div class="home-header-subtitle">Juntas somos mais fortes</div>
+                                </div>
+                                <div class="margin-bottom margin-large">
+                                    <p class="text-size-medium">
+                                        Inspiramos, acolhemos e guiamos <strong>mulheres imigrantes</strong> e todas que precisam recomeçar em sua jornada de <strong>empoderamento, cura e profissionalização</strong>.
+                                    </p>
+                                </div>
+                                <div class="cta-buttons">
+                                    <a href="quem-somos.html" class="cta-primary">Conhecer Nossa Missão</a>
+                                    <a href="ela-superou.html" class="cta-secondary">Ver Histórias de Superação</a>
+                                </div>
+                            </div>
+                            <div class="hero-image-wrapper">
+                                <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" alt="Mulheres empoderadas" class="hero-image">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
         <!-- Mission Section -->
         <section class="section_mission">
@@ -1129,32 +1051,25 @@
         // Navbar gradual solidification and other functionality
         $(document).ready(function() {
             // Navbar gradual solidification on scroll
-            $(window).on('scroll', function() {
-                var scroll    = $(this).scrollTop();
-                var maxScroll = 400;
-                var pct       = Math.min(scroll / maxScroll, 1);
-
-                // === background + blur como antes ===
-                var opacity = 0.3 + (0.95 - 0.3) * pct;
-                var blur    = 4 + (20 - 4) * pct;
+            $(window).scroll(function() {
+                var scroll = $(window).scrollTop();
+                var maxScroll = 400; // Distance for full solidification
+                
+                // Calculate opacity based on scroll position (0 to 1)
+                var opacity = Math.min(scroll / maxScroll, 1);
+                
+                // Calculate blur based on scroll position (0 to 20px)
+                var blur = Math.min((scroll / maxScroll) * 20, 20);
+                
+                // Apply gradual changes to navbar
                 $('#navbar').css({
-                    'background-color': `rgba(254, 247, 240, ${opacity})`,
+                    'background-color': `rgba(254, 247, 240, ${opacity * 0.95})`,
                     'backdrop-filter': `blur(${blur}px)`,
                     '-webkit-backdrop-filter': `blur(${blur}px)`,
                     'border-bottom': `1px solid rgba(129, 199, 132, ${opacity})`,
-                    'box-shadow': `0 2px 6px rgba(45, 125, 50, ${pct * 0.2})`
+                    'box-shadow': `0 2px 6px rgba(45, 125, 50, ${opacity * 0.15})`
                 });
-
-                // === cor do texto: interpolando branco (255) → #333 (51) ===
-                var start = 333;    // branco  
-                var end   = 51;     // cor final (33% gray)
-                var val   = Math.round(start + (end - start) * pct);
-                var rgb   = `rgb(${val}, ${val}, ${val})`;
-
-                // aplica a mesma cor a TODOS os links da nav
-                $('#navbar .w-nav-link, #navbar .lang-btn').css('color', rgb);
-                });
-
+            });
 
             // Mobile menu toggle
             $('.w-nav-button').click(function() {
@@ -1203,7 +1118,5 @@
             });
         });
     </script>
-    
-
 </body>
 </html>
