@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt" data-wf-domain="www.powergreenladies.com" data-wf-page="638f30311993bd5ae09edc48" data-wf-site="61c85ce6b8161ffd30681aa9">
+<html lang="pt" data-wf-domain="www.powergreenladies.com">
 <head>
     <meta charset="utf-8">
     <title>Power Green Ladies - Empoderamento e Recomeço</title>
@@ -9,1201 +9,211 @@
     <meta content="width=device-width, initial-scale=1" name="viewport">
     
     <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,900&family=Dancing+Script:wght@400;500;600;700&family=Caveat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,900&family=Dancing+Script:wght@400;500;600;700&display=swap" rel="stylesheet">
     
     <!-- Favicon -->
     <link href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='80'>🌿</text></svg>" rel="icon">
     
-    <style>
-        /* CSS Variables - Power Green Ladies Color Palette */
-        :root {
-            --primary-green: #2d7d32;
-            --light-green: #81c784;
-            --soft-pink: #f8bbd9;
-            --golden: #ffd700;
-            --cream: #fef7f0;
-            --white: #ffffff;
-            --black: #000000;
-            --dark-green: #1b5e20;
-            --light-gray: #f5f5f5;
-            --text-dark: #2c2c2c;
-            --text-light: #666666;
-        }
-
-        /* Reset & Base */
-        * {
-            box-sizing: border-box;
-        }
-
-        body {
-            margin: 0;
-            padding: 0;
-            font-family: 'Poppins', Arial, sans-serif;
-            color: var(--text-dark);
-            background-color: var(--white);
-            font-size: 14px;
-            line-height: 20px;
-        }
-
-        img {
-            vertical-align: middle;
-            max-width: 100%;
-            display: inline-block;
-        }
-
-        h1, h2, h3, h4, h5, h6 {
-            margin: 0;
-            font-weight: 400;
-        }
-
-        p {
-            margin: 0 0 10px 0;
-        }
-
-        strong {
-            font-weight: 700;
-        }
-
-        /* Utility Classes */
-        .w-layout-grid {
-            display: grid;
-        }
-
-        .w-nav {
-            position: relative;
-        }
-
-        .w-nav-brand {
-            float: left;
-            text-decoration: none;
-            position: relative;
-        }
-
-        .w-nav-menu {
-            float: right;
-            position: relative;
-        }
-
-        .w-nav-link {
-            vertical-align: top;
-            color: #222;
-            text-align: left;
-            margin-left: auto;
-            margin-right: auto;
-            padding: 20px;
-            text-decoration: none;
-            display: inline-block;
-            position: relative;
-        }
-
-        .w-nav-button {
-            float: right;
-            cursor: pointer;
-            tap-highlight-color: rgba(0, 0, 0, 0);
-            -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-            -webkit-user-select: none;
-            -moz-user-select: none;
-            -ms-user-select: none;
-            user-select: none;
-            padding: 18px;
-            font-size: 24px;
-            display: none;
-            position: relative;
-        }
-
-        .w--current {
-            color: var(--primary-green);
-        }
-
-        /* Container System */
-        .padding-global {
-            padding-left: 2.5rem;
-            padding-right: 2.5rem;
-        }
-
-        .container-large {
-            width: 100%;
-            max-width: 80rem;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        .container-large.is-navbar {
-            max-width: none;
-        }
-
-        /* Spacing System */
-        .padding-section-larg {
-            padding-top: 7rem;
-            padding-bottom: 7rem;
-        }
-
-        .margin-bottom {
-            margin-bottom: 1rem;
-        }
-
-        .margin-bottom.margin-medium {
-            margin-bottom: 2rem;
-        }
-
-        .margin-bottom.margin-large {
-            margin-bottom: 2.5rem;
-        }
-
-        .margin-top {
-            margin-top: 1rem;
-        }
-
-        .margin-top.margin-medium {
-            margin-top: 2rem;
-        }
-
-        .margin-navbar-light {
-            margin-top: 5rem;
-        }
-
-        /* Navigation */
-        .nav-bar_component {
-            position: relative;
-        }
-
-        .navbar_component {
-            background-color: rgba(254, 247, 240, 0);
-            backdrop-filter: blur(0px);
-            -webkit-backdrop-filter: blur(0px);
-            flex-direction: column;
-            align-items: center;
-            width: 100%;
-            height: auto;
-            min-height: 5rem;
-            padding: 1rem 5%;
-            display: flex;
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            z-index: 1000;
-            transition: all 0.1s ease;
-            border-bottom: 1px solid rgba(129, 199, 132, 0);
-            box-shadow: 0 2px 6px rgba(45, 125, 50, 0);
-        }
-
-        .navbar_container {
-            justify-content: space-between;
-            align-items: stretch;
-            width: 100%;
-            height: 100%;
-            margin-left: auto;
-            margin-right: auto;
-            display: flex;
-        }
-
-        .navbar_logo-link {
-            padding-left: 0;
-            display: flex;
-            align-items: center;
-            gap: 0.75rem;
-        }
-
-        .navbar_logo {
-            font-size: 2rem;
-            color: var(--primary-green);
-        }
-
-        .navbar_logo-text {
-            color: var(--primary-green);
-            font-size: 1.2rem;
-            font-weight: 600;
-            text-decoration: none;
-            font-family: 'Playfair Display', serif;
-        }
-
-        .navbar_menu {
-            align-items: center;
-            display: flex;
-            position: static;
-        }
-
-        .navbar_link {
-            color: var(--text-dark);
-            cursor: pointer;
-            padding: 0.5rem 1rem;
-            font-size: 1rem;
-            transition: all 0.2s;
-            text-decoration: none;
-            font-weight: 500;
-        }
-
-        .navbar_link:hover {
-            color: var(--primary-green);
-        }
-
-        .navbar_link.w--current {
-            color: var(--primary-green);
-            text-decoration: underline;
-            text-decoration-color: var(--primary-green);
-            text-decoration-thickness: 2px;
-            text-underline-offset: 6px;
-        }
-
-        .navbar_link.sos {
-            background-color: var(--soft-pink);
-            color: var(--white);
-            border-radius: 25px;
-            padding: 0.5rem 1.2rem;
-            font-weight: 600;
-            margin-left: 0.5rem;
-        }
-
-        .navbar_link.sos:hover {
-            background-color: #f48fb1;
-            color: var(--white);
-        }
-
-        /* Language Selector */
-        .language-selector {
-            display: flex;
-            gap: 0.5rem;
-            margin-left: 1rem;
-            align-items: center;
-        }
-
-        .lang-btn {
-            padding: 0.3rem 0.6rem;
-            border: 1px solid var(--light-green);
-            background: transparent;
-            color: var(--primary-green);
-            border-radius: 4px;
-            text-decoration: none;
-            font-size: 0.85rem;
-            font-weight: 500;
-            transition: all 0.2s;
-        }
-
-        .lang-btn:hover,
-        .lang-btn.active {
-            background-color: var(--primary-green);
-            color: var(--white);
-        }
-
-        /* Dropdown */
-        .navbar_dropdown {
-            position: relative;
-        }
-
-        .navbar_dropdown-toggle {
-            grid-column-gap: 0.5rem;
-            color: var(--text-dark);
-            align-items: center;
-            padding: 0.5rem 1rem;
-            font-size: 1rem;
-            transition: all 0.2s;
-            display: flex;
-            text-decoration: none;
-            cursor: pointer;
-            font-weight: 500;
-        }
-
-        .navbar_dropdown-toggle:hover {
-            color: var(--primary-green);
-        }
-
-        .dropdown-chevron {
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            width: 1rem;
-            height: 1rem;
-            display: flex;
-            transition: transform 0.2s;
-        }
-
-        .navbar_dropdown.w--open .dropdown-chevron {
-            transform: rotate(180deg);
-        }
-
-        .navbar_dropdown-list {
-            position: absolute;
-            top: 100%;
-            left: 50%;
-            transform: translateX(-50%);
-            background-color: rgba(254, 247, 240, 0.95);
-            backdrop-filter: blur(10px);
-            -webkit-backdrop-filter: blur(10px);
-            border: 1px solid var(--light-green);
-            border-radius: 8px;
-            padding: 0.5rem;
-            min-width: 180px;
-            opacity: 0;
-            visibility: hidden;
-            transition: all 0.2s;
-            box-shadow: 0 4px 20px rgba(45, 125, 50, 0.1);
-        }
-
-        .navbar_dropdown-list.w--open {
-            opacity: 1;
-            visibility: visible;
-        }
-
-        .navbar_dropdown-link {
-            color: var(--text-dark);
-            margin: 0.2rem 0;
-            padding: 0.8rem 1rem;
-            font-size: 0.95rem;
-            transition: all 0.2s;
-            text-decoration: none;
-            display: block;
-            border-radius: 4px;
-            font-weight: 500;
-        }
-
-        .navbar_dropdown-link:hover {
-            color: var(--primary-green);
-            background-color: rgba(45, 125, 50, 0.05);
-        }
-
-        /* Mobile Menu */
-        .navbar_menu-button {
-            padding: 0;
-            display: none;
-        }
-
-        .menu-icon1 {
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            width: 48px;
-            height: 48px;
-            margin-right: -0.5rem;
-            display: flex;
-        }
-
-        .menu-icon1_line-top,
-        .menu-icon1_line-middle,
-        .menu-icon1_line-bottom {
-            background-color: var(--primary-green);
-            width: 24px;
-            height: 2px;
-            transition: all 0.3s;
-        }
-
-        .menu-icon1_line-middle {
-            margin-top: 6px;
-            margin-bottom: 6px;
-        }
-
-        /* SOS Fixed Button */
-        .sos-fixed {
-            position: fixed;
-            bottom: 2rem;
-            right: 2rem;
-            background: linear-gradient(135deg, var(--soft-pink), #f48fb1);
-            color: var(--white);
-            padding: 1rem 1.5rem;
-            border-radius: 50px;
-            text-decoration: none;
-            font-weight: 600;
-            box-shadow: 0 4px 20px rgba(248, 187, 217, 0.4);
-            z-index: 999;
-            transition: all 0.3s ease;
-            animation: pulse 2s infinite;
-        }
-
-        .sos-fixed:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 6px 25px rgba(248, 187, 217, 0.6);
-            color: var(--white);
-        }
-
-        @keyframes pulse {
-            0% { transform: scale(1); }
-            50% { transform: scale(1.05); }
-            100% { transform: scale(1); }
-        }
-
-        /* Main Wrapper */
-        .main-wrapper {
-            position: relative;
-        }
-
-        /* Home Header Section */
-        /* Main Home Header Section */
-.section_home-header {
-    width: 100vw;
-    height: 100vh;
-    position: relative;
-    display: flex;
-    align-items: center;
-    min-height: 100vh;
-    max-height: 60rem;
-    margin-left: calc(-50vw + 50%);
-    /* ISTO AQUI: */
-    background: linear-gradient(135deg, var(--cream) 0%, var(--light-green) 100%);
-}
-
-
-        /* .home-header_content {
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-            max-height: 60rem;
-            display: flex;
-            position: relative;
-            z-index: 2;
-        } */
-
-        .home-header_grid-content {
-            grid-column-gap: 3rem;
-            grid-row-gap: 3rem;
-            grid-template-rows: auto;
-            grid-template-columns: 1fr 0.8fr;
-            grid-auto-columns: 1fr;
-            place-items: center;
-            display: grid;
-            height: 100%;
-            position: relative;
-        }
-
-        /* Decorative Elements */
-        .decorative-leaf {
-            position: absolute;
-            color: var(--light-green);
-            opacity: 0.3;
-            font-size: 3rem;
-            z-index: 1;
-            animation: float 6s ease-in-out infinite;
-        }
-
-        .leaf-1 { top: 30%; left: 10%; animation-delay: 0s; }
-        .leaf-2 { top: 20%; right: 15%; animation-delay: 2s; }
-        .leaf-3 { bottom: 15%; left: 8%; animation-delay: 4s; }
-        .leaf-4 { bottom: 25%; right: 10%; animation-delay: 1s; }
-
-        @keyframes float {
-            0%, 100% { transform: translateY(0px) rotate(0deg); }
-            50% { transform: translateY(-20px) rotate(5deg); }
-        }
-
-        .home-header-h1 {
-            font-size: 4.5rem;
-            font-weight: 300;
-            line-height: 1.1;
-            margin: 0;
-            color: var(--dark-green);
-            font-family: 'Playfair Display', serif;
-        }
-
-        .home-header-subtitle {
-            font-family: 'Dancing Script', cursive;
-            font-size: 2rem;
-            color: var(--primary-green);
-            margin: 1rem 0;
-            font-weight: 500;
-        }
-
-        .home-header-tag {
-            background: linear-gradient(135deg, var(--golden), #ffb300);
-            color: var(--white);
-            letter-spacing: 0.1em;
-            border-radius: 25px;
-            margin-bottom: 0;
-            padding: 0.4rem 1.2rem;
-            font-size: 0.9rem;
-            font-weight: 600;
-            display: inline-block;
-            box-shadow: 0 3px 15px rgba(255, 215, 0, 0.3);
-            z-index: 3;
-            position: relative;
-        }
-
-        .cta-buttons {
-            display: flex;
-            gap: 1.5rem;
-            margin-top: 2rem;
-            flex-wrap: wrap;
-        }
-
-        .cta-primary {
-            background: linear-gradient(135deg, var(--primary-green), var(--light-green));
-            color: var(--white);
-            padding: 1.2rem 2.5rem;
-            border: none;
-            border-radius: 50px;
-            font-size: 1.1rem;
-            font-weight: 600;
-            text-decoration: none;
-            display: inline-block;
-            transition: all 0.3s;
-            cursor: pointer;
-            box-shadow: 0 4px 20px rgba(45, 125, 50, 0.3);
-        }
-
-        .cta-primary:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 6px 25px rgba(45, 125, 50, 0.4);
-            color: var(--white);
-        }
-
-        .cta-secondary {
-            background: transparent;
-            color: var(--primary-green);
-            padding: 1.2rem 2.5rem;
-            border: 2px solid var(--primary-green);
-            border-radius: 50px;
-            font-size: 1.1rem;
-            font-weight: 600;
-            text-decoration: none;
-            display: inline-block;
-            transition: all 0.3s;
-            cursor: pointer;
-        }
-
-        .cta-secondary:hover {
-            background-color: var(--primary-green);
-            color: var(--white);
-        }
-
-        /* .home-header_content-left {
-            z-index: 2;
-            position: relative;
-        } */
-
-        .hero-image {
-            width: 85%;
-            max-width: 400px;
-            border-radius: 20px;
-            box-shadow: 0 10px 40px rgba(45, 125, 50, 0.2);
-            position: relative;
-            z-index: 2;
-        }
-
-        /* Mission Section */
-        .section_mission {
-            background: var(--cream);
-            position: relative;
-            overflow: hidden;
-        }
-
-        .mission_component {
-            grid-column-gap: 4rem;
-            grid-row-gap: 4rem;
-            grid-template-rows: auto;
-            grid-template-columns: 1fr 1fr;
-            grid-auto-columns: 1fr;
-            align-items: center;
-            display: grid;
-        }
-
-        .mission-h2 {
-            font-size: 3rem;
-            font-weight: 400;
-            line-height: 1.1;
-            margin: 0;
-            color: var(--dark-green);
-            font-family: 'Playfair Display', serif;
-        }
-
-        .mission-highlight {
-            color: var(--primary-green);
-            font-weight: 600;
-        }
-
-        .text-size-medium {
-            font-size: 1.125rem;
-            font-weight: 400;
-            line-height: 1.7;
-            color: var(--text-light);
-        }
-
-        /* Ela Superou Section */
-        .section_ela-superou {
-            background: linear-gradient(135deg, var(--primary-green), var(--dark-green));
-            color: var(--white);
-        }
-
-        .ela-superou-h2 {
-            font-size: 3.5rem;
-            font-weight: 300;
-            line-height: 1.1;
-            margin: 0 0 2rem 0;
-            color: var(--white);
-            font-family: 'Playfair Display', serif;
-            text-align: center;
-        }
-
-        .video-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-            margin-top: 3rem;
-        }
-
-        .video-card {
-            background: rgba(255, 255, 255, 0.1);
-            border-radius: 15px;
-            padding: 1.5rem;
-            backdrop-filter: blur(10px);
-            transition: all 0.3s;
-            border: 1px solid rgba(255, 255, 255, 0.2);
-        }
-
-        .video-card:hover {
-            transform: translateY(-5px);
-            background: rgba(255, 255, 255, 0.15);
-        }
-
-        .video-thumbnail {
-            width: 100%;
-            height: 200px;
-            background: var(--soft-pink);
-            border-radius: 10px;
-            margin-bottom: 1rem;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 3rem;
-        }
-
-        /* Footer */
-        .footer {
-            background-color: var(--dark-green);
-            color: var(--white);
-            padding: 3rem 0 2rem;
-        }
-
-        .footer-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
-            margin-bottom: 2rem;
-        }
-
-        .footer-section h4 {
-            color: var(--golden);
-            margin-bottom: 1rem;
-            font-size: 1.2rem;
-            font-weight: 600;
-        }
-
-        .footer-link {
-            color: var(--white);
-            text-decoration: none;
-            display: block;
-            margin-bottom: 0.5rem;
-            transition: color 0.2s;
-        }
-
-        .footer-link:hover {
-            color: var(--light-green);
-        }
-
-        .social-icons {
-            display: flex;
-            gap: 1rem;
-            margin-top: 1rem;
-        }
-
-        .social-icon {
-            width: 40px;
-            height: 40px;
-            background: var(--primary-green);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-decoration: none;
-            color: var(--white);
-            transition: all 0.3s;
-        }
-
-        .social-icon:hover {
-            background: var(--light-green);
-            transform: translateY(-2px);
-        }
-
-        .footer-bottom {
-            border-top: 1px solid rgba(255, 255, 255, 0.1);
-            padding-top: 2rem;
-            text-align: center;
-            color: rgba(255, 255, 255, 0.7);
-        }
-
-        /* Responsive Design */
-        @media screen and (max-width: 991px) {
-            .navbar_menu {
-                position: fixed;
-                top: 0;
-                left: 0;
-                width: 100%;
-                height: 100vh;
-                background: linear-gradient(135deg, var(--cream), var(--light-green));
-                flex-direction: column;
-                justify-content: center;
-                align-items: center;
-                gap: 2rem;
-                transform: translateX(-100%);
-                transition: transform 0.5s;
-                padding-bottom: 6.5rem;
-            }
-
-            .navbar_menu.w--open {
-                transform: translateX(0);
-            }
-
-            .navbar_link {
-                width: auto;
-                padding: 0.75rem 0;
-                font-size: 1.3rem;
-                color: #fff;
-            }
-
-            .navbar_menu-button {
-                display: block;
-            }
-
-            .home-header-h1 {
-                font-size: 3.5rem;
-            }
-
-            .home-header_grid-content {
-                grid-template-columns: 1fr;
-                text-align: center;
-            }
-
-            .mission_component {
-                grid-template-columns: 1fr;
-            }
-
-            .cta-buttons {
-                justify-content: center;
-            }
-
-            .language-selector {
-                margin-left: 0;
-                margin-top: 1rem;
-            }
-        }
-
-        @media screen and (max-width: 767px) {
-            .home-header-h1 {
-                font-size: 2.8rem;
-            }
-
-            .home-header-subtitle {
-                font-size: 1.5rem;
-            }
-
-            .mission-h2 {
-                font-size: 2.2rem;
-            }
-
-            .ela-superou-h2 {
-                font-size: 2.5rem;
-            }
-
-            .cta-buttons {
-                flex-direction: column;
-                align-items: center;
-            }
-
-            .sos-fixed {
-                bottom: 1rem;
-                right: 1rem;
-                padding: 0.8rem 1.2rem;
-            }
-        }
-
-        @media screen and (max-width: 479px) {
-            .padding-global {
-                padding-left: 1rem;
-                padding-right: 1rem;
-            }
-
-            .home-header-h1 {
-                font-size: 2.5rem;
-            }
-
-            .decorative-leaf {
-                font-size: 2rem;
-            }
-        }
-        /* 1) Vídeo de fundo e overlay de degradê */
-.section_home-header {
-  position: relative;
-  overflow: hidden;
-  /* altura que quiser, por ex: */
-  min-height: 80vh;
-}
-
-#hero-video {
-  position: absolute;
-  top: 0; left: 0;
-  width: 100%; height: 100%;
-  object-fit: cover;
-  filter: brightness(0.8) contrast(1.1);
-  z-index: 0;
-}
-
-/* overlay degradê de transparente (topo) para branco (base) */
-.section_home-header::before {
-  content: "";
-  position: absolute;
-  top: 0; left: 0;
-  width: 100%; height: 100%;
-  background: linear-gradient(
-    to bottom,
-    rgba(255,255,255,0.0) 0%,
-    rgba(255,255,255,0.4) 50%,
-    rgba(255,255,255,1) 100%
-  );
-  z-index: 1;
-}
-
-/* 2) Seu conteúdo sobre o vídeo */
-.home-header_content {
-  position: relative;
-  z-index: 2;
-  max-width: 600px;
-  margin: 0 auto;
-  padding: 4rem 1rem;
-  text-align: left;
-}
-
-.home-header_content h1,
-.home-header_content h2,
-.home-header_content p {
-  color: #0a5935; /* seu verde principal */
-}
-
-.home-header_content h1 {
-  font-size: 3rem;
-  line-height: 1.1;
-}
-
-.home-header_content p {
-  font-size: 1.125rem;
-  margin-top: 1.5rem;
-  color: #333; /* texto de apoio */
-}
-
-#navbar {
-  position: fixed;
-  top: 0; left: 0;
-  width: 100%;
-  padding: 1rem 2rem;
-  background-color: rgba(254, 247, 240, 0.244);  /* leve transparência */
-  backdrop-filter: blur(4px);                   /* blur inicial suave */
-  -webkit-backdrop-filter: blur(4px);
-  border-bottom: 1px solid rgba(129, 199, 132, 0.2);
-  box-shadow: 0 2px 6px rgba(45, 125, 50, 0.05);
-  transition: background-color 0.3s ease,
-              backdrop-filter 0.3s ease,
-              border-bottom 0.3s ease,
-              box-shadow 0.3s ease;
-  z-index: 1000;
-}
-
-#w-nav-menu .w-nav-link,
-#w-nav-menu .lang-btn {
-  color: #fff;
-  transition: color 0.3s ease;
-}
-
-    </style>
+    <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
     <!-- Navigation -->
-    <div class="nav-bar_component">
-        <div data-animation="default" class="navbar_component w-nav" data-easing2="ease" data-easing="ease" data-collapse="medium" role="banner" data-duration="400" id="navbar">
-            <div class="container-large is-navbar">
-                <div class="navbar_container">
-                    <a href="index.html" aria-current="page" class="navbar_logo-link w-nav-brand w--current">
-                        <div class="navbar_logo">🌿</div>
-                        <div class="navbar_logo-text">Power Green Ladies</div>
-                    </a>
-                    <nav role="navigation" class="navbar_menu w-nav-menu">
-                        <a href="index.html" aria-current="page" class="navbar_link w-nav-link w--current">Home</a>
-                        <a href="quem-somos.html" class="navbar_link w-nav-link">Quem Somos</a>
-                        <a href="oferecemos.html" class="navbar_link w-nav-link">O Que Oferecemos</a>
-                        <a href="loja-solidaria.html" class="navbar_link w-nav-link">Loja Solidária</a>
-                        <div data-hover="false" data-delay="0" class="navbar_dropdown w-dropdown">
-                            <div class="navbar_dropdown-toggle w-dropdown-toggle">
-                                <div>Ela Superou</div>
-                                <div class="dropdown-chevron w-embed">
-                                    <svg width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M1 1L6 6L11 1" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                    </svg>
-                                </div>
-                            </div>
-                            <nav class="navbar_dropdown-list w-dropdown-list">
-                                <a href="temporada-1.html" class="navbar_dropdown-link w-dropdown-link">Temporada 1</a>
-                                <a href="temporada-2.html" class="navbar_dropdown-link w-dropdown-link">Temporada 2</a>
-                                <a href="temporada-3.html" class="navbar_dropdown-link w-dropdown-link">Todas as Histórias</a>
-                            </nav>
-                        </div>
-                        <a href="blog.html" class="navbar_link w-nav-link">Blog</a>
-                        <a href="apoie.html" class="navbar_link w-nav-link">Apoie o Projeto</a>
-                        <a href="contato.html" class="navbar_link w-nav-link">Contato</a>
-                        <!-- <a href="sos.html" class="navbar_link sos w-nav-link">SOS Mulheres</a> -->
-                        
-                        <div class="language-selector">
-                            <a href="#" class="lang-btn active">PT</a>
-                            <a href="#" class="lang-btn">EN</a>
-                            <a href="#" class="lang-btn">ES</a>
-                        </div>
-                    </nav>
-                    <div class="navbar_menu-button w-nav-button">
-                        <div class="menu-icon1">
-                            <div class="menu-icon1_line-top"></div>
-                            <div class="menu-icon1_line-middle">
-                                <div class="menu-icon_line-middle-inner"></div>
-                            </div>
-                            <div class="menu-icon1_line-bottom"></div>
-                        </div>
+    <nav class="navbar" id="navbar">
+        <div class="navbar__container">
+            <a href="index.html" class="navbar__logo" aria-current="page">
+                <img src="logo.png" alt="Power Green Ladies" class="navbar__logo-img">
+            </a>
+            
+            <div class="navbar__menu" id="navbar-menu">
+                <a href="index.html" class="navbar__link navbar__link--current">Home</a>
+                <a href="quem-somos.html" class="navbar__link">Quem Somos</a>
+                <a href="oferecemos.html" class="navbar__link">O Que Oferecemos</a>
+                <a href="loja-solidaria.html" class="navbar__link">Loja Solidária</a>
+                
+                <!-- Dropdown Ela Superou -->
+                <div class="navbar__dropdown" id="ela-superou-dropdown">
+                    <button class="navbar__dropdown-toggle" type="button">
+                        <span>Ela Superou</span>
+                        <svg class="navbar__dropdown-icon" width="12" height="8" viewBox="0 0 12 8">
+                            <path d="M1 1L6 6L11 1" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </button>
+                    <div class="navbar__dropdown-menu">
+                        <a href="temporada-1.html" class="navbar__dropdown-link">Temporada 1</a>
+                        <a href="temporada-2.html" class="navbar__dropdown-link">Temporada 2</a>
+                        <a href="temporada-3.html" class="navbar__dropdown-link">Todas as Histórias</a>
                     </div>
                 </div>
+                
+                <a href="blog.html" class="navbar__link">Blog</a>
+                <a href="apoie.html" class="navbar__link">Apoie o Projeto</a>
+                <a href="contato.html" class="navbar__link">Contato</a>
+                
+                <!-- Language Selector -->
+                <div class="language-selector">
+                    <a href="#" class="language-selector__btn language-selector__btn--active">PT</a>
+                    <a href="#" class="language-selector__btn">EN</a>
+                    <a href="#" class="language-selector__btn">ES</a>
+                </div>
             </div>
+            
+            <!-- Mobile Menu Button -->
+            <button class="navbar__mobile-toggle" id="mobile-toggle" type="button" aria-label="Toggle menu">
+                <span class="navbar__mobile-line"></span>
+                <span class="navbar__mobile-line"></span>
+                <span class="navbar__mobile-line"></span>
+            </button>
         </div>
-    </div>
+    </nav>
 
     <!-- SOS Fixed Button -->
-    <a href="sos.html" class="sos-fixed">
-        💗 SOS Mulheres
-    </a>
+    <a href="sos.html" class="sos-button">💗 SOS Mulheres</a>
 
     <!-- Main Content -->
-    <div class="main-wrapper">
-        <!-- Home Header Section -->
-        <section class="section_home-header">
-  <!-- Vídeo de fundo -->
-  <video id="hero-video" autoplay muted loop playsinline>
-                        <source src="https://cdn.prod.website-files.com/61c85ce6b8161ffd30681aa9/64ff898291276c67317a8d7b_SeasonThree_Cut-transcode.mp4" data-wf-ignore="true">
-                        <source src="https://cdn.prod.website-files.com/61c85ce6b8161ffd30681aa9/64ff898291276c67317a8d7b_SeasonThree_Cut-transcode.webm" data-wf-ignore="true">
-                    </video>
-
-  <!-- Conteúdo sobre o vídeo -->
-  <div class="home-header_content">
-    <div class="home-header-tag">✨ Empoderamento Feminino</div>
-    <h1 class="home-header-h1">Recomeçar é um ato de coragem</h1>
-    <div class="home-header-subtitle">Juntas somos mais fortes</div>
-    <p class="text-size-medium">
-      Inspiramos, acolhemos e guiamos <strong>mulheres imigrantes</strong>  
-      e todas que precisam recomeçar em sua jornada de  
-      <strong>empoderamento, cura e profissionalização</strong>.
-    </p>
-    <div class="cta-buttons">
-      <a href="quem-somos.html" class="cta-primary">Conhecer Nossa Missão</a>
-      <a href="ela-superou.html" class="cta-secondary">Ver Histórias de Superação</a>
-    </div>
-  </div>
-
-  <!-- suas folhas decorativas -->
-  <!-- <div class="decorative-leaf leaf-1">🌿</div>
-  <div class="decorative-leaf leaf-2">🌸</div> -->
-  <!-- etc -->
-</section>
-
+    <main class="main">
+        <!-- Hero Section with Background Video -->
+        <section class="hero">
+            <video class="hero__video" autoplay muted loop playsinline>
+                <source src="https://cdn.prod.website-files.com/61c85ce6b8161ffd30681aa9/64ff898291276c67317a8d7b_SeasonThree_Cut-transcode.mp4" type="video/mp4">
+                <source src="https://cdn.prod.website-files.com/61c85ce6b8161ffd30681aa9/64ff898291276c67317a8d7b_SeasonThree_Cut-transcode.webm" type="video/webm">
+            </video>
+            
+            <div class="hero__content">
+                <div class="hero__tag">✨ Empoderamento Feminino</div>
+                <h1 class="hero__title">Recomeçar é um ato de coragem</h1>
+                <div class="hero__subtitle">Juntas somos mais fortes</div>
+                <p class="hero__description">
+                    Inspiramos, acolhemos e guiamos <strong>mulheres imigrantes</strong>  
+                    e todas que precisam recomeçar em sua jornada de  
+                    <strong>empoderamento, cura e profissionalização</strong>.
+                </p>
+                <div class="hero__buttons">
+                    <a href="quem-somos.html" class="btn btn--primary">Conhecer Nossa Missão</a>
+                    <a href="ela-superou.html" class="btn btn--secondary">Ver Histórias de Superação</a>
+                </div>
+            </div>
+        </section>
 
         <!-- Mission Section -->
-        <section class="section_mission">
-            <div class="padding-global">
-                <div class="container-large">
-                    <div class="padding-section-larg">
-                        <div class="w-layout-grid mission_component">
-                            <div class="mission_content">
-                                <div class="margin-bottom margin-medium">
-                                    <h2 class="mission-h2">
-                                        Nossa <span class="mission-highlight">Missão</span><br/>
-                                        <strong>É Transformar Vidas</strong>
-                                    </h2>
-                                </div>
-                                <p class="text-size-medium">
-                                    Acreditamos que toda mulher merece uma <strong>segunda chance</strong>. Seja você uma imigrante buscando recomeçar, uma sobrevivente de violência doméstica, ou simplesmente alguém que precisa redescobrir sua força interior.
-                                </p>
-                                <br/>
-                                <p class="text-size-medium">
-                                    Oferecemos <strong>apoio profissional, cursos de capacitação, rede de apoio</strong> e uma comunidade acolhedora onde cada história de superação inspira outras mulheres.
-                                </p>
-                                <br/>
-                                <p class="text-size-medium">
-                                    <strong>Juntas, construímos um futuro mais verde e próspero para todas.</strong>
-                                </p>
-                            </div>
-                            <div class="mission_image">
-                                <img src="https://images.unsplash.com/photo-1582213782179-e0d53f98f2ca?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" alt="Mulheres em comunidade" class="hero-image">
-                            </div>
+        <section class="mission">
+            <div class="container">
+                <div class="mission__grid">
+                    <div class="mission__content">
+                        <h2 class="mission__title">
+                            Nossa <span class="mission__highlight">Missão</span><br/>
+                            <strong>É Transformar Vidas</strong>
+                        </h2>
+                        <div class="mission__text">
+                            <p>
+                                Acreditamos que toda mulher merece uma <strong>segunda chance</strong>. Seja você uma imigrante buscando recomeçar, uma sobrevivente de violência doméstica, ou simplesmente alguém que precisa redescobrir sua força interior.
+                            </p>
+                            <p>
+                                Oferecemos <strong>apoio profissional, cursos de capacitação, rede de apoio</strong> e uma comunidade acolhedora onde cada história de superação inspira outras mulheres.
+                            </p>
+                            <p>
+                                <strong>Juntas, construímos um futuro mais verde e próspero para todas.</strong>
+                            </p>
                         </div>
+                    </div>
+                    <div class="mission__image">
+                        <img src="https://images.unsplash.com/photo-1582213782179-e0d53f98f2ca?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" alt="Mulheres em comunidade" class="mission__img">
                     </div>
                 </div>
             </div>
         </section>
 
         <!-- Ela Superou Preview Section -->
-        <section class="section_ela-superou">
-            <div class="padding-global">
-                <div class="container-large">
-                    <div class="padding-section-larg">
-                        <h2 class="ela-superou-h2">🌟 Ela Superou</h2>
-                        <div style="text-align: center; margin-bottom: 3rem;">
-                            <p class="text-size-medium" style="color: rgba(255, 255, 255, 0.9);">
-                                Histórias reais de mulheres que transformaram suas vidas e hoje inspiram outras
-                            </p>
-                        </div>
-                        
-                        <div class="video-grid">
-                            <div class="video-card">
-                                <div class="video-thumbnail">▶️</div>
-                                <h4 style="margin-bottom: 0.5rem; color: var(--white);">Maria - Do Zero ao Próprio Negócio</h4>
-                                <p style="color: rgba(255, 255, 255, 0.8); font-size: 0.9rem;">Temporada 1 • Episódio 1</p>
-                            </div>
-                            <div class="video-card">
-                                <div class="video-thumbnail">▶️</div>
-                                <h4 style="margin-bottom: 0.5rem; color: var(--white);">Ana - Reconstruindo Após a Violência</h4>
-                                <p style="color: rgba(255, 255, 255, 0.8); font-size: 0.9rem;">Temporada 1 • Episódio 2</p>
-                            </div>
-                            <div class="video-card">
-                                <div class="video-thumbnail">▶️</div>
-                                <h4 style="margin-bottom: 0.5rem; color: var(--white);">Lucia - Imigrante e Empreendedora</h4>
-                                <p style="color: rgba(255, 255, 255, 0.8); font-size: 0.9rem;">Temporada 2 • Episódio 1</p>
-                            </div>
-                        </div>
-                        
-                        <div style="text-align: center; margin-top: 3rem;">
-                            <a href="ela-superou.html" class="cta-primary" style="background: var(--golden); color: var(--dark-green);">Ver Todas as Histórias</a>
-                        </div>
-                    </div>
+        <section class="ela-superou">
+            <div class="container">
+                <header class="ela-superou__header">
+                    <h2 class="ela-superou__title">🌟 Ela Superou</h2>
+                    <p class="ela-superou__description">
+                        Histórias reais de mulheres que transformaram suas vidas e hoje inspiram outras
+                    </p>
+                </header>
+                
+                <div class="ela-superou__grid">
+                    <article class="video-card">
+                        <div class="video-card__thumbnail">▶️</div>
+                        <h3 class="video-card__title">Maria - Do Zero ao Próprio Negócio</h3>
+                        <p class="video-card__meta">Temporada 1 • Episódio 1</p>
+                    </article>
+                    
+                    <article class="video-card">
+                        <div class="video-card__thumbnail">▶️</div>
+                        <h3 class="video-card__title">Ana - Reconstruindo Após a Violência</h3>
+                        <p class="video-card__meta">Temporada 1 • Episódio 2</p>
+                    </article>
+                    
+                    <article class="video-card">
+                        <div class="video-card__thumbnail">▶️</div>
+                        <h3 class="video-card__title">Lucia - Imigrante e Empreendedora</h3>
+                        <p class="video-card__meta">Temporada 2 • Episódio 1</p>
+                    </article>
                 </div>
+                
+                <footer class="ela-superou__footer">
+                    <a href="ela-superou.html" class="btn btn--accent">Ver Todas as Histórias</a>
+                </footer>
             </div>
         </section>
-    </div>
+    </main>
 
     <!-- Footer -->
     <footer class="footer">
-        <div class="padding-global">
-            <div class="container-large">
-                <div class="footer-grid">
-                    <div class="footer-section">
-                        <h4>🌿 Power Green Ladies</h4>
-                        <p style="color: rgba(255, 255, 255, 0.8); line-height: 1.6;">
-                            Empoderamento, cura e profissionalização para mulheres que querem recomeçar.
-                        </p>
-                        <div class="social-icons">
-                            <a href="#" class="social-icon">📘</a>
-                            <a href="#" class="social-icon">📷</a>
-                            <a href="#" class="social-icon">🐦</a>
-                            <a href="#" class="social-icon">▶️</a>
-                        </div>
-                    </div>
-                    <div class="footer-section">
-                        <h4>Navegação</h4>
-                        <a href="quem-somos.html" class="footer-link">Quem Somos</a>
-                        <a href="oferecemos.html" class="footer-link">O Que Oferecemos</a>
-                        <a href="ela-superou.html" class="footer-link">Ela Superou</a>
-                        <a href="blog.html" class="footer-link">Blog</a>
-                    </div>
-                    <div class="footer-section">
-                        <h4>Apoio</h4>
-                        <a href="sos.html" class="footer-link">SOS Mulheres</a>
-                        <a href="apoie.html" class="footer-link">Apoie o Projeto</a>
-                        <a href="loja-solidaria.html" class="footer-link">Loja Solidária</a>
-                        <a href="contato.html" class="footer-link">Contato</a>
-                    </div>
-                    <div class="footer-section">
-                        <h4>Legal</h4>
-                        <a href="privacidade.html" class="footer-link">Política de Privacidade</a>
-                        <a href="termos.html" class="footer-link">Termos de Uso</a>
-                        <a href="cookies.html" class="footer-link">Cookies</a>
+        <div class="container">
+            <div class="footer__grid">
+                <div class="footer__section">
+                    <h4 class="footer__title">🌿 Power Green Ladies</h4>
+                    <p class="footer__description">
+                        Empoderamento, cura e profissionalização para mulheres que querem recomeçar.
+                    </p>
+                    <div class="footer__social">
+                        <a href="#" class="footer__social-link" aria-label="Facebook">📘</a>
+                        <a href="#" class="footer__social-link" aria-label="Instagram">📷</a>
+                        <a href="#" class="footer__social-link" aria-label="Twitter">🐦</a>
+                        <a href="#" class="footer__social-link" aria-label="YouTube">▶️</a>
                     </div>
                 </div>
-                <div class="footer-bottom">
-                    <p>&copy; 2024 Power Green Ladies. Todos os direitos reservados. 🌿</p>
+                
+                <div class="footer__section">
+                    <h4 class="footer__title">Navegação</h4>
+                    <nav class="footer__nav">
+                        <a href="quem-somos.html" class="footer__link">Quem Somos</a>
+                        <a href="oferecemos.html" class="footer__link">O Que Oferecemos</a>
+                        <a href="ela-superou.html" class="footer__link">Ela Superou</a>
+                        <a href="blog.html" class="footer__link">Blog</a>
+                    </nav>
                 </div>
+                
+                <div class="footer__section">
+                    <h4 class="footer__title">Apoio</h4>
+                    <nav class="footer__nav">
+                        <a href="sos.html" class="footer__link">SOS Mulheres</a>
+                        <a href="apoie.html" class="footer__link">Apoie o Projeto</a>
+                        <a href="loja-solidaria.html" class="footer__link">Loja Solidária</a>
+                        <a href="contato.html" class="footer__link">Contato</a>
+                    </nav>
+                </div>
+                
+                <div class="footer__section">
+                    <h4 class="footer__title">Legal</h4>
+                    <nav class="footer__nav">
+                        <a href="privacidade.html" class="footer__link">Política de Privacidade</a>
+                        <a href="termos.html" class="footer__link">Termos de Uso</a>
+                        <a href="cookies.html" class="footer__link">Cookies</a>
+                    </nav>
+                </div>
+            </div>
+            
+            <div class="footer__bottom">
+                <p>&copy; 2024 Power Green Ladies. Todos os direitos reservados. 🌿</p>
             </div>
         </div>
     </footer>
 
-    <!-- JavaScript -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script>
-        // Navbar gradual solidification and other functionality
-        $(document).ready(function() {
-            // Navbar gradual solidification on scroll
-            $(window).on('scroll', function() {
-                var scroll    = $(this).scrollTop();
-                var maxScroll = 400;
-                var pct       = Math.min(scroll / maxScroll, 1);
-
-                // === background + blur como antes ===
-                var opacity = 0.3 + (0.95 - 0.3) * pct;
-                var blur    = 4 + (20 - 4) * pct;
-                $('#navbar').css({
-                    'background-color': `rgba(254, 247, 240, ${opacity})`,
-                    'backdrop-filter': `blur(${blur}px)`,
-                    '-webkit-backdrop-filter': `blur(${blur}px)`,
-                    'border-bottom': `1px solid rgba(129, 199, 132, ${opacity})`,
-                    'box-shadow': `0 2px 6px rgba(45, 125, 50, ${pct * 0.2})`
-                });
-
-                // === cor do texto: interpolando branco (255) → #333 (51) ===
-                var start = 333;    // branco  
-                var end   = 51;     // cor final (33% gray)
-                var val   = Math.round(start + (end - start) * pct);
-                var rgb   = `rgb(${val}, ${val}, ${val})`;
-
-                // aplica a mesma cor a TODOS os links da nav
-                $('#navbar .w-nav-link, #navbar .lang-btn').css('color', rgb);
-                });
-
-
-            // Mobile menu toggle
-            $('.w-nav-button').click(function() {
-                $('.w-nav-menu').toggleClass('w--open');
-                $(this).toggleClass('w--open');
-            });
-
-            // Dropdown toggle
-            $('.w-dropdown-toggle').click(function(e) {
-                e.preventDefault();
-                var dropdown = $(this).parent('.w-dropdown');
-                dropdown.toggleClass('w--open');
-                dropdown.find('.w-dropdown-list').toggleClass('w--open');
-            });
-
-            // Close dropdown when clicking outside
-            $(document).click(function(e) {
-                if (!$(e.target).closest('.w-dropdown').length) {
-                    $('.w-dropdown').removeClass('w--open');
-                    $('.w-dropdown-list').removeClass('w--open');
-                }
-            });
-
-            // Close mobile menu when clicking a link
-            $('.w-nav-link').click(function() {
-                $('.w-nav-menu').removeClass('w--open');
-                $('.w-nav-button').removeClass('w--open');
-            });
-
-            // Language selector
-            $('.lang-btn').click(function(e) {
-                e.preventDefault();
-                $('.lang-btn').removeClass('active');
-                $(this).addClass('active');
-            });
-
-            // Smooth scrolling for anchor links
-            $('a[href^="#"]').click(function(e) {
-                e.preventDefault();
-                var target = $(this.getAttribute('href'));
-                if (target.length) {
-                    $('html, body').animate({
-                        scrollTop: target.offset().top - 80
-                    }, 800);
-                }
-            });
-        });
-    </script>
-    
-
+    <script src="scripts.js"></script>
 </body>
 </html>

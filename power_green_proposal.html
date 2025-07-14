@@ -1,0 +1,635 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Power Green Ladies - Proposta de Website</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Dancing+Script:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-green: #2d7d32;
+            --light-green: #81c784;
+            --dark-green: #1b5e20;
+            --soft-pink: #f8bbd9;
+            --golden: #ffd700;
+            --cream: #fef7f0;
+            --white: #ffffff;
+            --text-dark: #2c2c2c;
+            --text-light: #666666;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+            color: var(--text-dark);
+            background: var(--white);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        /* Header */
+        .header {
+            background: linear-gradient(135deg, var(--primary-green), var(--light-green));
+            color: var(--white);
+            padding: 4rem 0;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .header::before {
+            content: "";
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><text y=".9em" font-size="20" fill="rgba(255,255,255,0.1)">🌿</text></svg>') repeat;
+            animation: float 20s linear infinite;
+        }
+
+        @keyframes float {
+            0% { transform: translate(-50%, -50%) rotate(0deg); }
+            100% { transform: translate(-50%, -50%) rotate(360deg); }
+        }
+
+        .header-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        .logo {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .header h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 3.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .header .subtitle {
+            font-family: 'Dancing Script', cursive;
+            font-size: 1.8rem;
+            margin-bottom: 2rem;
+            color: var(--golden);
+        }
+
+        .badge {
+            display: inline-block;
+            background: var(--golden);
+            color: var(--dark-green);
+            padding: 0.8rem 2rem;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 1.1rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            box-shadow: 0 4px 20px rgba(255, 215, 0, 0.4);
+        }
+
+        /* Section Styles */
+        .section {
+            padding: 5rem 0;
+        }
+
+        .section-alt {
+            background: var(--cream);
+        }
+
+        .section-dark {
+            background: linear-gradient(135deg, var(--dark-green), var(--primary-green));
+            color: var(--white);
+        }
+
+        .section h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.8rem;
+            text-align: center;
+            margin-bottom: 3rem;
+            color: var(--dark-green);
+        }
+
+        .section-dark h2 {
+            color: var(--white);
+        }
+
+        .highlight {
+            color: var(--primary-green);
+        }
+
+        .section-dark .highlight {
+            color: var(--golden);
+        }
+
+        /* Cards */
+        .cards-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 4rem;
+        }
+
+        .card {
+            background: var(--white);
+            border-radius: 20px;
+            padding: 2.5rem;
+            box-shadow: 0 10px 40px rgba(45, 125, 50, 0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+            text-align: center;
+            border: 3px solid transparent;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 60px rgba(45, 125, 50, 0.2);
+            border-color: var(--light-green);
+        }
+
+        .card-icon {
+            font-size: 4rem;
+            margin-bottom: 1.5rem;
+            height: 80px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .card h3 {
+            font-size: 1.4rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            color: var(--dark-green);
+        }
+
+        .card p {
+            color: var(--text-light);
+            line-height: 1.7;
+        }
+
+        /* Special Cards */
+        .card-featured {
+            background: linear-gradient(135deg, var(--soft-pink), #f48fb1);
+            color: var(--white);
+            transform: scale(1.05);
+        }
+
+        .card-featured h3,
+.card-featured p {
+            color: var(--white);
+        }
+
+        .card-featured:hover {
+            transform: scale(1.05) translateY(-10px);
+        }
+
+        /* MVP vs Complete */
+        .comparison {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            margin-top: 4rem;
+        }
+
+        .comparison-item {
+            background: var(--white);
+            border-radius: 20px;
+            padding: 3rem;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .mvp-card {
+            border: 3px solid var(--light-green);
+        }
+
+        .complete-card {
+            border: 3px solid var(--golden);
+            background: linear-gradient(135deg, var(--golden), #ffb300);
+            color: var(--white);
+        }
+
+        .comparison-item h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.2rem;
+            margin-bottom: 1rem;
+        }
+
+        .mvp-card h3 {
+            color: var(--primary-green);
+        }
+
+        .comparison-item .badge-small {
+            display: inline-block;
+            padding: 0.5rem 1rem;
+            border-radius: 25px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            margin-bottom: 2rem;
+        }
+
+        .mvp-badge {
+            background: var(--light-green);
+            color: var(--white);
+        }
+
+        .complete-badge {
+            background: var(--white);
+            color: var(--dark-green);
+        }
+
+        /* Features List */
+        .features-list {
+            list-style: none;
+            text-align: left;
+            margin-top: 2rem;
+        }
+
+        .features-list li {
+            padding: 0.8rem 0;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+            position: relative;
+            padding-left: 2rem;
+        }
+
+        .mvp-card .features-list li {
+            border-bottom: 1px solid rgba(45, 125, 50, 0.1);
+        }
+
+        .features-list li::before {
+            content: "✅";
+            position: absolute;
+            left: 0;
+            top: 0.8rem;
+        }
+
+        /* CTA */
+        .cta {
+            background: linear-gradient(135deg, var(--soft-pink), #f48fb1);
+            color: var(--white);
+            text-align: center;
+            padding: 4rem 0;
+        }
+
+        .cta h2 {
+            color: var(--white);
+            margin-bottom: 2rem;
+        }
+
+        .cta p {
+            font-size: 1.2rem;
+            margin-bottom: 3rem;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 1.2rem 3rem;
+            background: var(--golden);
+            color: var(--dark-green);
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: all 0.3s;
+            box-shadow: 0 4px 20px rgba(255, 215, 0, 0.3);
+        }
+
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 30px rgba(255, 215, 0, 0.5);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 2.5rem;
+            }
+            
+            .comparison {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+            
+            .container {
+                padding: 0 1rem;
+            }
+            
+            .cards-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .highlight-box {
+            background: rgba(255, 215, 0, 0.1);
+            border: 2px solid var(--golden);
+            border-radius: 15px;
+            padding: 2rem;
+            margin: 2rem 0;
+            text-align: center;
+        }
+
+        .highlight-box h4 {
+            color: var(--dark-green);
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">🌿</div>
+                <h1>Power Green Ladies</h1>
+                <p class="subtitle">Proposta de Website</p>
+                <div class="badge">Projeto de Impacto Social</div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Visão Geral -->
+    <section class="section">
+        <div class="container">
+            <h2>Sua <span class="highlight">Missão Digital</span></h2>
+            <p style="text-align: center; font-size: 1.2rem; max-width: 800px; margin: 0 auto; color: var(--text-light);">
+                Criamos uma plataforma digital completa para <strong>inspirar, acolher e guiar mulheres imigrantes</strong> 
+                em sua jornada de empoderamento. Um espaço online que conecta histórias, oferece apoio e constrói uma 
+                comunidade forte de transformação.
+            </p>
+            
+            <div class="highlight-box">
+                <h4>🎯 O que você terá</h4>
+                <p>Um website profissional que funciona como <strong>centro de apoio digital</strong>, onde mulheres encontram recursos, 
+                inspiração e uma rede de apoio 24/7. Tudo gerenciado facilmente por você através de um painel administrativo.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- MVP vs Completo -->
+    <section class="section section-alt">
+        <div class="container">
+            <h2>Duas <span class="highlight">Fases de Desenvolvimento</span></h2>
+            <div class="comparison">
+                <div class="comparison-item mvp-card">
+                    <div class="badge-small mvp-badge">FASE 1 - MVP</div>
+                    <h3>Lançamento Inicial</h3>
+                    <p style="margin-bottom: 2rem;">Versão essencial do seu website com as funcionalidades principais para começar a impactar vidas imediatamente.</p>
+                    
+                    <ul class="features-list">
+                        <li><strong>Website Completo</strong> - Design profissional responsivo</li>
+                        <li><strong>Sistema SOS Mulheres</strong> - Botão de emergência e apoio</li>
+                        <li><strong>Doações Online</strong> - PIX e pagamentos internacionais</li>
+                        <li><strong>"Ela Superou"</strong> - Você cadastra vídeos que aparecem automaticamente</li>
+                        <li><strong>Eventos Simples</strong> - Cadastro de eventos futuros com imagem e descrição</li>
+                        <li><strong>3 Idiomas</strong> - Português, Inglês e Espanhol</li>
+                        <li><strong>Painel Admin</strong> - Gerencie tudo facilmente</li>
+                    </ul>
+                </div>
+
+                <div class="comparison-item complete-card">
+                    <div class="badge-small complete-badge">FASE 2 - COMPLETO</div>
+                    <h3>Plataforma Completa</h3>
+                    <p style="margin-bottom: 2rem;">Evolução para uma plataforma robusta com todas as funcionalidades avançadas para máximo impacto.</p>
+                    
+                    <ul class="features-list">
+                        <li><strong>Eventos Avançados</strong> - Sistema completo com inscrições e gerenciamento</li>
+                        <li><strong>Blog Dinâmico</strong> - Publique artigos e atualizações</li>
+                        <li><strong>Loja Solidária ***</strong></li>
+                        <li><strong>Patrocínios</strong> - Sistema para empresas apoiadoras</li>
+                        <li><strong>SOS Avançado</strong> - Melhorar a ideia</li>
+                        <!-- <li><strong>Analytics</strong> - Relatórios de impacto e métricas</li> -->
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Funcionalidades Principais -->
+    <section class="section">
+        <div class="container">
+            <h2>Funcionalidades <span class="highlight">Principais</span></h2>
+            <div class="cards-grid">
+                <div class="card">
+                    <div class="card-icon">🏠</div>
+                    <h3>Website Institucional</h3>
+                    <p>Design profissional com sua identidade visual. Página inicial impactante, seções sobre missão, e navegação em 3 idiomas.</p>
+                </div>
+
+                <div class="card card-featured">
+                    <div class="card-icon">💗</div>
+                    <h3>SOS Mulheres</h3>
+                    <p>Botão de emergência sempre visível, formulários seguros para pedidos de ajuda.</p>
+                </div>
+
+                <div class="card">
+                    <div class="card-icon">🎬</div>
+                    <h3>Ela Superou</h3>
+                    <p>Você cadastra vídeos organizados por temporadas. Aparecem automaticamente no site com player profissional e navegação entre episódios.</p>
+                </div>
+
+                <div class="card">
+                    <div class="card-icon">💰</div>
+                    <h3>Sistema de Doações</h3>
+                    <p>Aceita PIX para doadores brasileiros e cartões internacionais para apoiadores dos EUA. Recibos automáticos e transparência total.</p>
+                </div>
+
+                <div class="card">
+                    <div class="card-icon">📅</div>
+                    <h3>Gestão de Eventos</h3>
+                    <p>Cadastre eventos futuros com imagem, título, descrição e data. Aparecem automaticamente no site para divulgação da comunidade.</p>
+                </div>
+
+                <div class="card">
+                    <div class="card-icon">🛍️</div>
+                    <h3>Loja Solidária !***</h3>
+                    <!-- <p>Espaço onde as mulheres do programa podem vender seus produtos artesanais. Cada produto conta a história da artesã, gerando renda e visibilidade para o trabalho delas.</p> -->
+                </div>
+            </div>
+            
+            <!-- <div class="highlight-box">
+                <h4>💡 Sobre a Loja Solidária</h4>
+                <p>Este é um marketplace social onde as mulheres que passaram pelos programas do Power Green Ladies podem vender seus produtos (artesanato, comidas, serviços). Cada venda gera renda direta para elas e mostra suas histórias de superação, criando um ciclo de empoderamento econômico e social.</p>
+            </div> -->
+        </div>
+    </section>
+
+    <!-- Tecnologias -->
+    <section class="section section-dark">
+        <div class="container">
+            <h2>Tecnologias <span class="highlight">Modernas e Confiáveis</span></h2>
+            <p style="text-align: center; font-size: 1.2rem; margin-bottom: 3rem; opacity: 0.9;">
+                Utilizamos tecnologias robustas e testadas para garantir que seu website seja rápido, seguro e fácil de gerenciar.
+            </p>
+            <div class="cards-grid">
+                <div class="card">
+                    <div class="card-icon">🐍</div>
+                    <h3>Django</h3>
+                    <p>Framework web robusto usado por Instagram e Pinterest. Garante segurança máxima e facilita atualizações futuras.</p>
+                </div>
+
+                <div class="card">
+                    <div class="card-icon">⚡</div>
+                    <h3>HTMX + Alpine.js</h3>
+                    <p>Tecnologias modernas que criam interações dinâmicas sem complexidade. Resultado: site rápido e experiência fluida.</p>
+                </div>
+
+                <div class="card">
+                    <div class="card-icon">🎨</div>
+                    <h3>Tailwind CSS</h3>
+                    <p>Sistema de design que garante interface consistente e profissional. Usado por empresas como Netflix e Shopify.</p>
+                </div>
+            </div>
+            
+            <div style="text-align: center; margin-top: 3rem; padding: 2rem; background: rgba(255,255,255,0.1); border-radius: 15px;">
+                <h4 style="color: var(--golden); margin-bottom: 1rem;">🔒 Segurança Empresarial</h4>
+                <p style="opacity: 0.9;">Hospedagem em servidores confiáveis com certificado SSL, backups automáticos e proteção contra ataques. Seus dados e dos usuários sempre seguros.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Investimento -->
+    <section class="section section-alt">
+        <div class="container">
+            <h2>Investimento no <span class="highlight">Projeto</span></h2>
+            
+            <div style="max-width: 800px; margin: 0 auto;">
+                <div style="background: var(--white); border-radius: 20px; padding: 3rem; box-shadow: 0 10px 40px rgba(45, 125, 50, 0.1); border: 3px solid var(--light-green);">
+                    
+                    <!-- ÁREA PARA VOCÊ PREENCHER OS VALORES -->
+                    <div style="text-align: center; margin-bottom: 3rem;">
+                        <h3 style="color: var(--dark-green); font-size: 1.8rem; margin-bottom: 1rem;">Desenvolvimento Completo</h3>
+                        
+                        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin: 2rem 0;">
+                            <!-- <div style="text-align: center; padding: 1.5rem; background: var(--cream); border-radius: 15px;">
+                                <h4 style="color: var(--primary-green); margin-bottom: 0.5rem;">MVP (Fase 1)</h4>
+                                <div style="font-size: 2rem; font-weight: bold; color: var(--dark-green);">
+                                    [VALOR_MVP]
+                                </div>
+                                <p style="color: var(--text-light); margin: 0;">Pagamento à vista ou parcelado</p>
+                            </div> -->
+                            
+                            <div style="text-align: center; padding: 1.5rem; background: linear-gradient(135deg, var(--golden), #ffb300); border-radius: 15px; color: white;">
+                                <h4 style="margin-bottom: 0.5rem;">Projeto Completo</h4>
+                                <div style="font-size: 2rem; font-weight: bold;">
+                                    $2300
+                                </div>
+                                <!-- <p style="opacity: 0.9; margin: 0;">Desconto de 15% no total</p> -->
+                            </div>
+                        </div>
+                        
+                        <div style="margin-top: 2rem; padding: 1.5rem; background: rgba(45, 125, 50, 0.1); border-radius: 15px; border-left: 5px solid var(--primary-green);">
+                            <h4 style="color: var(--dark-green); margin-bottom: 1rem;">📋 O que está incluído:</h4>
+                            <ul style="text-align: left; list-style: none; padding: 0;">
+                                <li style="padding: 0.3rem 0;">✅ Desenvolvimento completo do website</li>
+                                <li style="padding: 0.3rem 0;">✅ Design responsivo profissional</li>
+                                <li style="padding: 0.3rem 0;">✅ Painel administrativo </li>
+                                <li style="padding: 0.3rem 0;">✅ Configuração de hospedagem</li>
+                                <li style="padding: 0.3rem 0;">✅ Treinamento para uso do sistema</li>
+                                <li style="padding: 0.3rem 0;">✅ 30 dias de suporte pós-lançamento</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <hr style="border: none; height: 1px; background: var(--light-green); margin: 2rem 0;">
+                    
+                    <div style="text-align: center;">
+                        <h3 style="color: var(--dark-green); font-size: 1.8rem; margin-bottom: 1rem;">Manutenção e Suporte</h3>
+                        
+                        <div style="background: var(--primary-green); color: white; padding: 2rem; border-radius: 15px; margin: 1rem 0;">
+                            <div style="font-size: 2.5rem; font-weight: bold; margin-bottom: 0.5rem;">
+                                $200/mês
+                            </div>
+                            <p style="opacity: 0.9; margin: 0;">Suporte contínuo e tranquilidade total</p>
+                        </div>
+                        
+                        <div style="margin-top: 2rem; padding: 1.5rem; background: rgba(45, 125, 50, 0.1); border-radius: 15px;">
+                            <h4 style="color: var(--dark-green); margin-bottom: 1rem;">🛡️ Manutenção inclui:</h4>
+                            <ul style="text-align: left; list-style: none; padding: 0; columns: 2; gap: 2rem;">
+                                <li style="padding: 0.3rem 0;">✅ Atualizações de segurança</li>
+                                <li style="padding: 0.3rem 0;">✅ Backup automático diário</li>
+                                <li style="padding: 0.3rem 0;">✅ Monitoramento 24/7</li>
+                                <li style="padding: 0.3rem 0;">✅ Suporte técnico</li>
+                                <li style="padding: 0.3rem 0;">✅ Pequenos ajustes de conteúdo</li>
+                                <!-- <li style="padding: 0.3rem 0;">✅ Relatórios mensais</li> -->
+                            </ul>
+                        </div>
+                        
+                        <p style="color: var(--text-light); font-size: 0.9rem; margin-top: 1.5rem; font-style: italic;">
+                            * Manutenção opcional, mas altamente recomendada para garantir funcionamento perfeito
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Especial para Imigrantes -->
+    <!-- <section class="section">
+        <div class="container">
+            <h2>Pensado para <span class="highlight">Mulheres Imigrantes</span> nos EUA</h2>
+            <div class="cards-grid">
+                <div class="card">
+                    <div class="card-icon">🗺️</div>
+                    <h3>Recursos Localizados</h3>
+                    <p>Informações específicas sobre direitos, leis americanas e contatos de apoio organizados por estado.</p>
+                </div>
+
+                <div class="card">
+                    <div class="card-icon">💳</div>
+                    <h3>Pagamentos Internacionais</h3>
+                    <p>Sistema aceita cartões americanos e métodos de pagamento locais, facilitando doações e compras.</p>
+                </div>
+
+                <div class="card">
+                    <div class="card-icon">🌐</div>
+                    <h3>Multilíngue</h3>
+                    <p>Interface completa em Português, Inglês e Espanhol, garantindo acessibilidade para todas.</p>
+                </div>
+
+                <div class="card">
+                    <div class="card-icon">🚨</div>
+                    <h3>Emergências Adaptadas</h3>
+                    <p>Sistema SOS integrado com recursos americanos: 911, hotlines locais e organizações de apoio regionais.</p>
+                </div>
+            </div>
+        </div>
+    </section> -->
+
+    <!-- CTA -->
+    <!-- <section class="cta">
+        <div class="container">
+            <h2>Pronta para Transformar Vidas Digitalmente?</h2>
+            <p>Este website será sua ferramenta mais poderosa para amplificar o impacto do Power Green Ladies. 
+            Vamos juntas construir uma plataforma que realmente faça a diferença na vida de milhares de mulheres.</p>
+            <a href="#" class="btn">Vamos Conversar sobre o Projeto</a>
+        </div>
+    </section> -->
+
+    <!-- Footer -->
+    <footer style="background: var(--dark-green); color: var(--white); text-align: center; padding: 2rem 0;">
+        <div class="container">
+            <p>🌿 <strong>Power Green Ladies</strong> - Proposta de Website Digital</p>
+            <p style="opacity: 0.8; margin-top: 1rem;">Juntas somos mais fortes. Juntas transformamos o mundo.</p>
+        </div>
+    </footer>
+</body>
+</html>
